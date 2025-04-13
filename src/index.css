@@ -6,83 +6,70 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+@layer base {
+  :root {
     --font-sora: "Sora", sans-serif;
     --font-code: "Source Code Pro", monospace;
     --font-grotesk: "Space Grotesk", sans-serif;
     color-scheme: dark;
-}
+  }
 
-* {
+  * {
     scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-sans bg-n-8 text-n-1 text-base;
+  }
 }
 
-@layer base {
-    body {
-        @apply font-sans bg-n-8 text-n-1 text-base;
-    }
-}
-
-.rotate-45 {
+@layer utilities {
+  .rotate-45 {
     @apply rotate-[45deg];
-}
-
-.rotate-90 {
+  }
+  .rotate-90 {
     @apply rotate-[90deg];
-}
-
-.rotate-135 {
+  }
+  .rotate-135 {
     @apply rotate-[135deg];
-}
-
-.rotate-180 {
+  }
+  .rotate-180 {
     @apply rotate-[180deg];
-}
-
-.rotate-225 {
+  }
+  .rotate-225 {
     @apply rotate-[225deg];
-}
-
-.rotate-270 {
+  }
+  .rotate-270 {
     @apply rotate-[270deg];
-}
-
-.rotate-315 {
+  }
+  .rotate-315 {
     @apply rotate-[315deg];
-}
-
-.rotate-360 {
+  }
+  .rotate-360 {
     @apply rotate-[360deg];
-}
-
-.-rotate-45 {
+  }
+  .-rotate-45 {
     @apply rotate-[-45deg];
-}
-
-.-rotate-90 {
+  }
+  .-rotate-90 {
     @apply rotate-[-90deg];
-}
-
-.-rotate-135 {
+  }
+  .-rotate-135 {
     @apply rotate-[-135deg];
-}
-
-.-rotate-180 {
+  }
+  .-rotate-180 {
     @apply rotate-[-180deg];
-}
-
-.-rotate-225 {
+  }
+  .-rotate-225 {
     @apply rotate-[-225deg];
-}
-
-.-rotate-270 {
+  }
+  .-rotate-270 {
     @apply rotate-[-270deg];
-}
-
-.-rotate-315 {
+  }
+  .-rotate-315 {
     @apply rotate-[-315deg];
-}
-
-.-rotate-360 {
+  }
+  .-rotate-360 {
     @apply rotate-[-360deg];
+  }
 }
