@@ -1,8 +1,16 @@
-// vite.config.js
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: "/Brainwave/", // Match your repo name
-});
+  base: '/Brainwave/',
+  build: {
+    outDir: 'dist',
+    emptyOutDir: true,
+    rollupOptions: {
+      input: {
+        main: './index.html' // Ensure HTML is processed correctly
+      }
+    }
+  }
+})
